@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watch Video BD Earn Bot</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#101827;color:white;
+ font-family:Arial,sans-serif;padding:18px;
+}
+.header{
+ background:linear-gradient(135deg,#087f5b,#12b886);
+ padding:24px;border-radius:18px;text-align:center;
+}
+.header h2{margin:0 0 8px}
+.balance{
+ background:#202d40;padding:22px;
+ border-radius:16px;text-align:center;margin-top:18px;
+}
+.balance h1{color:#20d99a;margin:10px}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:12px;margin-top:18px;
+}
+.item{
+ background:#202d40;padding:20px 10px;
+ border-radius:14px;text-align:center;
+}
+.item span{font-size:28px}
+.item h3{font-size:15px}
+button{
+ background:#12b886;color:white;border:0;
+ padding:12px 18px;border-radius:10px;
+ font-size:15px;font-weight:bold;width:100%;
+}
+.section{
+ background:#202d40;padding:18px;
+ margin-top:18px;border-radius:14px;
+}
+.small{color:#b5c3d5;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h2>🎬 Watch Video BD Earn</h2>
+<p>ভিডিও দেখুন, টাস্ক করুন!</p>
+</div>
+
+<div class="balance">
+<p>💰 আপনার ব্যালেন্স</p>
+<h1>৳ 0.00</h1>
+<p class="small">আপনার আয় এখানে দেখানো হবে</p>
+</div>
+
+<div class="grid">
+<div class="item">
+<span>🎥</span>
+<h3>ভিডিও দেখুন</h3>
+<button onclick="notice()">ভিডিও টাস্ক</button>
+</div>
+
+<div class="item">
+<span>🎁</span>
+<h3>দৈনিক বোনাস</h3>
+<button onclick="notice()">বোনাস</button>
+</div>
+
+<div class="item">
+<span>👥</span>
+<h3>বন্ধুকে আমন্ত্রণ</h3>
+<button onclick="share()">রেফার করুন</button>
+</div>
+
+<div class="item">
+<span>💳</span>
+<h3>টাকা উত্তোলন</h3>
+<button onclick="notice()">উইথড্র</button>
+</div>
+</div>
+
+<div class="section">
+<h3>📢 গুরুত্বপূর্ণ ঘোষণা</h3>
+<p class="small">Watch Video BD Earn Bot-এ আপনাকে স্বাগতম। নতুন টাস্ক শীঘ্রই চালু হবে।</p>
+</div>
+
+<div class="section">
+<h3>📞 যোগাযোগ</h3>
+<p class="small">যেকোনো সমস্যায় অ্যাডমিনের সাথে যোগাযোগ করুন।</p>
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+function notice(){
+ alert("এই ফিচারটি এখনো চালু হয়নি।");
+}
+
+function share(){
+ const link = "https://t.me/WatchVideoBDEarnBot";
+ const text = "Watch Video BD Earn Bot-এ যোগ দিন: "+link;
+ if(navigator.clipboard){
+  navigator.clipboard.writeText(text)
+   .then(()=>alert("রেফারেল মেসেজ কপি হয়েছে!"))
+   .catch(()=>alert(text));
+ }else{
+  alert(text);
+ }
+}
+</script>
+</body>
+</html>
