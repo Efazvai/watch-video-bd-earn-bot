@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watch Video BD Earn Bot</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:16px;
+ background:#0b1220;color:white;
+ font-family:Arial,sans-serif;
+}
+.header{
+ background:linear-gradient(135deg,#087f5b,#16c784);
+ padding:25px 15px;border-radius:20px;
+ text-align:center;
+}
+.header h2{margin:0;font-size:24px}
+.header p{margin-bottom:0}
+.balance{
+ margin-top:18px;padding:22px;
+ background:#19283d;border-radius:18px;
+ text-align:center;
+}
+.balance h1{color:#21e6a1;font-size:36px;margin:12px}
+.stats{
+ display:flex;gap:12px;margin-top:14px;
+}
+.stat{
+ flex:1;background:#19283d;
+ padding:15px 8px;border-radius:14px;
+ text-align:center;
+}
+.stat strong{font-size:20px;color:#21e6a1}
+h3{font-size:16px}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:13px;margin-top:18px;
+}
+.item{
+ background:#19283d;padding:19px 12px;
+ border-radius:16px;text-align:center;
+}
+.emoji{font-size:34px}
+button{
+ background:#10b981;color:white;
+ border:0;border-radius:10px;
+ padding:12px;width:100%;
+ font-weight:bold;font-size:15px;
+}
+.section{
+ background:#19283d;padding:18px;
+ border-radius:15px;margin-top:17px;
+}
+.section p{color:#bac8d9;font-size:14px}
+.footer{
+ text-align:center;color:#8492a6;
+ padding:25px 5px;font-size:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h2>🎬 Watch Video BD</h2>
+<p>ভিডিও দেখুন • টাস্ক করুন • আয় করুন</p>
+</div>
+
+<div class="balance">
+<p>💰 আপনার মোট ব্যালেন্স</p>
+<h1>৳ 0.00</h1>
+<p>আপনার একাউন্ট ব্যালেন্স</p>
+</div>
+
+<div class="stats">
+<div class="stat">
+<strong>0</strong>
+<p>মোট টাস্ক</p>
+</div>
+<div class="stat">
+<strong>0</strong>
+<p>রেফার</p>
+</div>
+</div>
+
+<div class="grid">
+
+<div class="item">
+<div class="emoji">🎥</div>
+<h3>ভিডিও টাস্ক</h3>
+<button onclick="coming()">ভিডিও দেখুন</button>
+</div>
+
+<div class="item">
+<div class="emoji">🎁</div>
+<h3>দৈনিক বোনাস</h3>
+<button onclick="coming()">বোনাস নিন</button>
+</div>
+
+<div class="item">
+<div class="emoji">👥</div>
+<h3>রেফারেল</h3>
+<button onclick="refer()">বন্ধুকে জানান</button>
+</div>
+
+<div class="item">
+<div class="emoji">💳</div>
+<h3>উইথড্র</h3>
+<button onclick="coming()">টাকা তুলুন</button>
+</div>
+
+</div>
+
+<div class="section">
+<h3>💸 পেমেন্ট পদ্ধতি</h3>
+<p>🟣 বিকাশ</p>
+<p>🟠 নগদ</p>
+</div>
+
+<div class="section">
+<h3>📢 নোটিশ বোর্ড</h3>
+<p>Watch Video BD Earn Bot-এ স্বাগতম। আমাদের নতুন ফিচারগুলো শীঘ্রই চালু হবে।</p>
+</div>
+
+<div class="footer">
+Watch Video BD Earn Bot © 2026
+</div>
+
+<script>
+const tg=window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+function coming(){
+ alert("এই ফিচারটি এখনো চালু হয়নি।");
+}
+
+function refer(){
+ const bot="WatchVideoBDEarnBot";
+ const link="https://t.me/"+bot;
+ const share="https://t.me/share/url?url="+
+ encodeURIComponent(link);
+ tg.openTelegramLink(share);
+}
+</script>
+
+</body>
+</html>
